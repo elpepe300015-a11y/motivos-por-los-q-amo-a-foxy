@@ -2,79 +2,265 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Los motivos por los que amo a Foxy</title>
+    <title>Por qué amo a Foxy</title>
+
+    <!-- =========================
+         ESTILOS GENERALES
+    ========================== -->
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: #0b0b0b;
-            color: #f5f5f5;
-            font-family: Arial, sans-serif;
             margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top, #1a0000, #000000);
+            color: #f2f2f2;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+        header {
+            background: linear-gradient(90deg, #8b0000, #300000);
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 0 30px red;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 0;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px black;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* =========================
+           CONTENEDOR PRINCIPAL
+        ========================== */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(20, 0, 0, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.3);
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #ff4d4d;
+            border-bottom: 2px solid #ff4d4d;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 8px black;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           LISTA DE MOTIVOS
+        ========================== */
+        ul.motivos {
+            list-style: none;
             padding: 0;
         }
 
-        header {
-            background-color: #8b0000;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        .contenedor {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background-color: #151515;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-        }
-
-        ul {
-            list-style: "🦊 ";
-            padding-left: 20px;
-        }
-
-        li {
+        ul.motivos li {
+            background: rgba(50, 0, 0, 0.8);
             margin-bottom: 12px;
+            padding: 15px;
+            border-left: 5px solid red;
             font-size: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
+        ul.motivos li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 0 15px red;
+        }
+
+        /* =========================
+           FRASES
+        ========================== */
+        .frase {
+            background: black;
+            padding: 25px;
+            border-radius: 10px;
+            font-style: italic;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px red;
+        }
+
+        /* =========================
+           GALERÍA (IMÁGENES SIMULADAS)
+        ========================== */
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .img-box {
+            background: #200000;
+            height: 200px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px black;
+        }
+
+        .img-box::before {
+            content: "🦊 Foxy";
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 18px;
+            color: white;
+        }
+
+        /* =========================
+           BOTÓN
+        ========================== */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: darkred;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            box-shadow: 0 0 15px red;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: red;
+            box-shadow: 0 0 30px red;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
         footer {
             text-align: center;
-            padding: 15px;
-            color: #aaa;
+            padding: 30px;
             font-size: 14px;
+            opacity: 0.7;
+        }
+
+        /* =========================
+           ANIMACIÓN DE PARPADEO
+        ========================== */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
+        }
+
+        .blink {
+            animation: blink 2s infinite;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>❤️ Los motivos por los que amo a Foxy ❤️</h1>
-</header>
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header>
+        <h1>🦊 FOX Y MI AMOR POR ÉL 🦊</h1>
+        <p>Una página dedicada al animatrónico más salvaje</p>
+    </header>
 
-<div class="contenedor">
-    <p>Foxy no es solo un animatrónico, es un personaje único que destaca entre todos.  
-    Estos son algunos de los motivos por los que lo amo:</p>
+    <!-- =========================
+         CONTENIDO
+    ========================== -->
+    <div class="container">
 
-    <ul>
-        <li>Es el más rápido y peligroso, siempre te mantiene en tensión.</li>
-        <li>Su diseño de pirata es increíble y muy original.</li>
-        <li>No depende solo de cámaras, hay que prestarle atención de verdad.</li>
-        <li>Su personalidad salvaje y rebelde lo hace especial.</li>
-        <li>Es impredecible, y eso lo vuelve aterrador.</li>
-        <li>Aunque da miedo, también resulta carismático.</li>
-        <li>Es uno de los personajes más icónicos de FNAF.</li>
-    </ul>
+        <!-- INTRO -->
+        <section>
+            <h2>¿Por qué Foxy?</h2>
+            <p>
+                Foxy no es solo un personaje. Foxy es miedo, velocidad,
+                locura, tensión y carisma. Mientras otros esperan,
+                <strong>Foxy ataca</strong>.
+            </p>
+        </section>
 
-    <p>🖤 Foxy no es perfecto… y justamente por eso es el mejor.</p>
-</div>
+        <!-- MOTIVOS -->
+        <section>
+            <h2>Motivos por los que amo a Foxy</h2>
+            <ul class="motivos">
+                <li>Es el único que corre directamente hacia ti.</li>
+                <li>No sigue las reglas normales del juego.</li>
+                <li>Su diseño de pirata es legendario.</li>
+                <li>Su parche, su gancho y su mirada dan miedo real.</li>
+                <li>Obliga al jugador a estar atento.</li>
+                <li>Es rápido, agresivo e impredecible.</li>
+                <li>No es perfecto, está roto.</li>
+                <li>Su jumpscare es uno de los más icónicos.</li>
+                <li>Representa el caos dentro del orden.</li>
+                <li>Siempre sorprende, incluso a jugadores expertos.</li>
+            </ul>
+        </section>
 
-<footer>
-    Página hecha con amor para Foxy 🦊
-</footer>
+        <!-- FRASE -->
+        <section>
+            <div class="frase blink">
+                "Foxy no te espera. Foxy corre. Foxy ataca."
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section>
+            <h2>Galería de Foxy</h2>
+            <div class="galeria">
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+            </div>
+        </section>
+
+        <!-- MENSAJE FINAL -->
+        <section>
+            <h2>Mensaje final</h2>
+            <p>
+                Puede que Foxy dé miedo, pero ahí está su magia.
+                No es solo terror, es personalidad.  
+                No es solo un enemigo, es una leyenda.
+            </p>
+
+            <p style="text-align:center; margin-top:30px;">
+                <a href="#" class="btn">🦊 Siempre Foxy</a>
+            </p>
+        </section>
+
+    </div>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        Página creada con pasión, miedo y amor por Foxy ❤️🦊  
+        Five Nights at Freddy's fan page
+    </footer>
 
 </body>
 </html>
